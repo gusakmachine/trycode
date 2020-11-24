@@ -1,0 +1,321 @@
+/*Index-page*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 20px;
+    z-index: 1;
+}
+.header__left {
+    display: flex;
+}
+.header__logo {
+    display: flex;
+    margin-right: 25px;
+}
+.header__logo > img {
+    width: 115px;
+}
+.edit-filename {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.edit-filename__input {
+    margin-right: 7px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    min-width: 80px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+}
+.edit-filename__icon {
+    opacity: 0.3;
+}
+.select-mode {
+    margin-left: 29px;
+    margin-right: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-color: hsl(0,0%,80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 160px;
+    max-width: 160px;
+    max-height: 38px;
+}
+.select-mode:hover {
+    border-color: hsl(0,0%,70%);
+}
+.selected-mode, .select-mode__item {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.select-mode-icon {
+    margin-right: 7px;
+    width: 18px;
+    height: 18px;
+}
+.select-mode-name {
+    transform: translateY(-2px);
+}
+.select-mode__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 40px;
+    max-width: 160px;
+    background-color: hsl(0,0%,100%);
+    border-color: hsl(0,0%,80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    z-index: 1;
+}
+.select-mode__item {
+    width: 150px;
+    height: 38px;
+}
+.select-mode__item:not(.selected):hover {
+    background: #D2E6FF;
+}
+.selected {
+    background: #2684fe;
+    color: #fff;
+}
+.content-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-indicator__separator {
+    align-self: stretch;
+    background-color: hsl(0,0%,80%);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    width: 1px;
+    box-sizing: border-box;
+}
+.content-indicator__icon {
+    padding: 8px;
+    fill: hsl(0,0%,80%);
+}
+.content-indicator__icon:hover {
+    fill: hsl(0,0%,60%);
+}
+.header__right {
+    display: flex;
+}
+.header__right > * {
+    margin-left: 10px;
+}
+.settings-wrapper {
+    position: relative;
+}
+.settings-btn > span {
+    margin-left: 5px;
+}
+.settings {
+    position: absolute;
+    top: 50px;
+    left: -120px;
+    padding: 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #f1f5f6;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.03);
+    z-index: 1;
+}
+.settings-code {
+    margin-bottom: 25px;
+    display: block;
+    font-weight: bolder;
+}
+.settings-item {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: #c5cbd4;
+    transition: all 0.2s ease;
+}
+.toggle-check {
+    background-color: #2684fe;
+}
+.toggle-track {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    left: 5px;
+    opacity: 1;
+    background: #fff;
+    border-radius: 100%;
+    transition: opacity 0.25s ease;
+}
+.toggle-track-check {
+    left: unset;
+    right: 5px;
+}
+.settings-item > span {
+    margin-left: 5px;
+    width: 50%;
+}
+.password-inpt {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+.fork-btn > span {
+    margin-left: 5px;
+}
+.git-logo {
+    width: 16px;
+    height: 16px;
+    margin-left: 7px;
+}
+.profile {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 44px;
+    cursor: pointer;
+}
+.profile__avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.profile-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    padding: 8px 0;
+    top: 50px;
+    left: -100px;
+    width: 148px;
+    background: #ffffff;
+    border: 1px solid #f1f5f6;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    animation: popup 0.15s ease-in-out;
+    z-index: 1;
+}
+.profile-options > .line {
+    margin: 5px 0;
+    border-bottom-color: #f1f5f6;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    width: 100%;
+}
+.profile-options__item {
+    padding: 6px 18px;
+    font-size: 14px;
+}
+.editor {
+    position: relative;
+    width: 100%;
+    height: calc((100% - 81px) - 35px);
+    font-size: 15px;
+}
+.user-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #f13d3d;
+    margin-right: 5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    border-radius: 30px;
+    width: 105px;
+    height: 34px;
+    background-color: rgba(241, 61, 61, 0.05);
+    margin-top: 4px;
+}
+.user-counter__red-circle {
+    background-color: #f13d3d;
+    width: 8px;
+    height: 8px;
+    border-radius: 30px;
+    margin-right: 8px;
+    animation: animate-live 1s ease-in-out infinite;
+}
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #f1f4f9;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.footer__right {
+    display: flex;
+}
+.footer__right > a {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #808080;
+}
+.footer__right > a:hover {
+    background-color: #f4f8fd;
+    color: #202020;
+}
+
+@keyframes animate-live {
+    0% {
+        box-shadow: 0 0 0px 1px rgba(241, 61, 61, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0px 6px rgba(241, 61, 61, 0);
+    }
+}
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

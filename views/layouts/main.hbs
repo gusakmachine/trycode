@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {{#if title }}
+            {{room.name}}
+        {{else}}
+            TryCode — realtime collaborative code editor
+        {{/if}}
+    </title>
+    {{> style}}
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+    <body>
+        {{{ body }}}
+        {{> index-scripts}}
+    </body>
+</html>
